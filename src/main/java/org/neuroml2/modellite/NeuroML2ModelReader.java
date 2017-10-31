@@ -65,7 +65,7 @@ public class NeuroML2ModelReader
         {
             if (line.indexOf("=") > 0)
             {
-                System.out.println("Parsing: " + line);
+                //System.out.println("Parsing: " + line);
                 String tag = line.split(" = ")[0].trim();
                 String val = line.split(" = ")[1].trim();
                 String[] pre = tag.split(":");
@@ -131,7 +131,7 @@ public class NeuroML2ModelReader
                 || sae.getClass().getName().equals("org.neuroml.model.IonChannelKS")
                 || sae.getClass().getName().equals("org.neuroml.model.PoissonFiringSynapse")))
             {
-                System.out.println("-- Including " + sae.getClass().getName());
+                //System.out.println("-- Including " + sae.getClass().getName());
                 NeuroMLConverter.addElementToDocument(nmlDoc, sae);
             }
         }
