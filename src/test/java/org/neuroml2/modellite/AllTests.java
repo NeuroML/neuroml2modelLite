@@ -19,7 +19,13 @@ public class AllTests {
 	@Test
 	public void testChannels() throws Throwable {
 		
-        String[] nmlFiles = {"kdr.channel.nml", "SK_E2.channel.nml","SKv3_1.channel.nml","NML2_SingleCompHHCell.nml"};
+        String[] nmlFiles = {"kdr.channel.nml", 
+                             "SK_E2.channel.nml",
+                             "SKv3_1.channel.nml",
+                             "NML2_SingleCompHHCell.nml", 
+                             "k2.channel.nml", 
+                             "kx_rod.channel.nml"};
+        
         for (String n: nmlFiles)
         {
             File f = new File("src/test/resources/"+n);

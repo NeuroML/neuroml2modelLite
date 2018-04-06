@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<neuroml xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.neuroml.org/schema/neuroml2" id="rods_small" xsi:schemaLocation="http://www.neuroml.org/schema/neuroml2 https://raw.githubusercontent.com/NeuroML/NeuroML2/development/Schemas/NeuroML2/NeuroML_v2beta5.xsd">
+    <ionChannel species="non_specific" type="ionChannelPassive" conductance="0.5pS" id="leak"/>
+    <ionChannelHH species="non_specific" conductance="10pS" id="ih_rod">
+        <notes>Single ion channel description, adapted from Liu XD, Kourennyi DE (2004) Effects of tetraethylammonium on Kx channels and simulated light response in rod photoreceptors. Ann Biomed Eng 32:1428-42</notes>
+        <gateHHrates instances="1" id="n">
+            <forwardRate type="HHExpRate" rate="1per_s" midpoint="-82mV" scale="-10.66mV"/>
+            <reverseRate type="HHExpRate" rate="1per_s" midpoint="-82mV" scale="10.66mV"/>
+        </gateHHrates>
+    </ionChannelHH>
+    <ionChannelHH species="k" conductance="10pS" id="kv_rod">
+        <notes>Single Channel description adapted from Y. Kamiyama, T. O'Sura, S. Usui (1996): Ionic current model of the vertebrate rod photoreceptor, Vision Research.</notes>
+        <gateHHrates instances="4" id="n">
+            <forwardRate type="HHExpLinearRate" rate="0.11per_ms" midpoint="20mV" scale="22mV"/>
+            <reverseRate type="HHExpRate" rate="0.0625per_ms" midpoint="0mV" scale="-80mV"/>
+        </gateHHrates>
+    </ionChannelHH>
+    <ionChannelHH species="k" conductance="10pS" id="kx_rod">
+        <notes>Single Channel description adapted from Y. Kamiyama, T. O'Sura, S. Usui (1996): Ionic current model of the vertebrate rod photoreceptor, Vision Research.</notes>
+        <gateHHrates instances="1" id="n">
+            <forwardRate type="HHExpRate" rate="0.66per_s" midpoint="-49.9mV" scale="11.4mV"/>
+            <reverseRate type="HHExpRate" rate="0.66per_s" midpoint="-49.9mV" scale="-11.4mV"/>
+        </gateHHrates>
+    </ionChannelHH>
+    <gapJunction conductance="0.5nS" id="rod_rod_gap"/>
+    <pulseGenerator delay="50ms" duration="200ms" amplitude="0.0032nA" id="pulseGen1"/>
+</neuroml>

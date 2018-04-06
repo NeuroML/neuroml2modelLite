@@ -31,7 +31,7 @@ public class NeuroML2ModelReader
          */
         if (localCopyJar == null)
         {
-            String nml2jar = "org.neuroml.neuroml2-model-0.0.7-jar-with-dependencies.jar";
+            String nml2jar = "org.neuroml.neuroml2-model-0.0.8-jar-with-dependencies.jar";
             File f = getLocalFile(nml2jar);
 
             localCopyJar = f.getCanonicalPath();
@@ -59,7 +59,7 @@ public class NeuroML2ModelReader
         {
             throw new NeuroMLException("Problem loading: " + nml2File + ":\n" + strerr);
         }
-
+        
         String[] lines = strin.split("\\n");
         for (String line : lines)
         {
@@ -129,7 +129,8 @@ public class NeuroML2ModelReader
                 || sae.getClass().getName().equals("org.neuroml.model.Cell")
                 || sae.getClass().getName().equals("org.neuroml.model.Cell2CaPools")
                 || sae.getClass().getName().equals("org.neuroml.model.IonChannelKS")
-                || sae.getClass().getName().equals("org.neuroml.model.PoissonFiringSynapse")))
+                || sae.getClass().getName().equals("org.neuroml.model.PoissonFiringSynapse")
+                || sae.getClass().getName().equals("org.neuroml.model.GapJunction")))
             {
                 //System.out.println("-- Including " + sae.getClass().getName());
                 NeuroMLConverter.addElementToDocument(nmlDoc, sae);
