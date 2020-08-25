@@ -188,7 +188,7 @@ public class NeuroML2ModelReader
         //ionChannelFile = "../../geppetto/org.geppetto.model.neuroml/src/test/resources/hhcell/NML2_SingleCompHHCell.nml";
         //ionChannelFile = "/tmp/NeuroML_3644588102506634724.tmp";
         //ionChannelFile = "../../neuroConstruct/osb/cerebral_cortex/networks/Thalamocortical/NeuroML2/pythonScripts/netbuild/TestL23.net.nml";
-        ionChannelFile = "../../neuroConstruct/osb/cerebellum/networks/VervaekeEtAl-GolgiCellNetwork/NeuroML2/Golgi_040408_C1.net.nml";
+        //ionChannelFile = "../../neuroConstruct/osb/cerebellum/networks/VervaekeEtAl-GolgiCellNetwork/NeuroML2/Golgi_040408_C1.net.nml";
         if (args.length == 1)
         {
             ionChannelFile = args[0];
